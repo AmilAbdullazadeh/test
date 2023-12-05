@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A front-end template that helps you build fast, modern mobile web apps."
+    />
+    <title>Home page</title>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="A front-end template that helps you build fast, modern mobile web apps." />
-        <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
 
-        <link rel="stylesheet" href="./style/style.css" />
-    </head>
-
-    <body>
-        
-        <header id="header" >
+  <body>
+    <!-- <header id="header" >
             
             <div>
-                <!-- logo -->
                 <img src="" alt="">
             </div>
 
@@ -75,8 +75,8 @@
 
             </div>
 
-        </header>
-
+        </header> -->
+    <!-- 
         <main id="main" >
 
             <section>
@@ -135,48 +135,88 @@
 
             </section>
 
-        </main>
+        </main> -->
 
-         <footer id="footer" >
+    <footer id="footer">
+      <div class="footer__leftside">
 
-            <div class="footer__leftside" >
+        <div class="footer__links">
+          <h3 class="footer__links-title">Shopping</h3>
+          <ul class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Men</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Women</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Kids</a>
+            </li>
+          </ul>
+        </div>
 
-                <div class="footer__links" >
-                    <h3 class="footer__links-title" >Shopping</h3>
-                    <ul class="footer__links-list" >
-                        <li class="footer__links-list-item" >
-                            <a href="" class="footer__links-list-item-link" >Men</a>
-                        </li>
-                        <li class="footer__links-list-item" >
-                            <a href="" class="footer__links-list-item-link" >Women</a>
-                        </li>
-                        <li class="footer__links-list-item" >
-                            <a href="" class="footer__links-list-item-link" >Kids</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="footer__links">
+          <h3 class="footer__links-title">Shopping</h3>
+          <ul class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Men</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Women</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Kids</a>
+            </li>
+          </ul>
+        </div>
 
-            </div>
+        <div class="footer__links">
+          <h3 class="footer__links-title">Shopping</h3>
+          <ul class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Men</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Women</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Kids</a>
+            </li>
+          </ul>
+        </div>
 
-            <div class="footer__rightside" >
+        <div class="footer__links">
+          <h3 class="footer__links-title">Shopping</h3>
+          <ul class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Men</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Women</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="" class="footer__links-list-item-link">Kids</a>
+            </li>
+          </ul>
+        </div>
 
-                <h4>The latest</h4>
+      </div>
 
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, nesciunt.
-                </p>
+      <div class="footer__rightside">
+        <h4 class="footer__title" >The latest</h4>
 
-                <form>
+        <p class="footer__content" >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
+          nesciunt.
+        </p>
 
-                    <input type="email" placeholder="Email" >
+        <form class="footer__form" > 
+            <!-- BEM => Block Element Modifier -->
+          <input class="footer__form-input" type="email" placeholder="Email" />
 
-                    <button>Sign up</button>
-
-                </form>
-
-            </div>
-
-        </footer>
-
-    </body>
+          <button class="footer__form-btn" >Sign up</button>
+        </form>
+      </div>
+    </footer>
+  </body>
 </html>
