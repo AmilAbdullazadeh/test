@@ -24,12 +24,22 @@ button {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        margin: 0 auto;
+        // column-gap: 66px;
+        // row-gap: 40px;
+        gap: 40px 66px;
       }
 
       &__item {
         width: 30%;
         height: 600px;
-        margin-right: 10px;
+        animation-name: slideInFromLeft;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        // margin-right: 65px;
 
         &:nth-child(3n) {
           margin-right: 0;
@@ -210,5 +220,15 @@ button {
         border-bottom: 1px solid grey;
       }
     }
+  }
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
