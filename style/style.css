@@ -20,13 +20,12 @@ button {
 }
 #main .products .product__list {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 40px 66px;
 }
 #main .products .product__item {
-  width: 30%;
   height: 600px;
   animation-name: slideInFromLeft;
   animation-duration: 1s;

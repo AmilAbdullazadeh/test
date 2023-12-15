@@ -22,16 +22,14 @@ button {
 
       &__list {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        // column-gap: 66px;
-        // row-gap: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 40px 66px;
       }
 
       &__item {
-        width: 30%;
+        // width: 30%;
         height: 600px;
         animation-name: slideInFromLeft;
         animation-duration: 1s;
