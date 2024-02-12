@@ -1,66 +1,41 @@
-// const Validate = function (password) {
-//   this.password = password;
-//   this.validateNumberPassword = () => {
-//     const isNumber = this.password
-//       .split("")
-//       .some((item) => !isNaN(Number(item)));
-//     isNumber
-//       ? console.log("Number yoxlanisi-dogru")
-//       : console.log("Parolda reqem daxil etmemisiniz");
-//   };
-//   this.validateLength = () => {
-//     this.password.length >= 8
-//       ? console.log("Parol uzunlugu yoxlanisi-dogru")
-//       : console.log("Parol uzunlugu 8 reqemden cox olmalidir");
-//   };
-//   this.validateCharacter = () => {
-//     const character = this.password
-//       .split("")
-//       .some((item) => "@?&%$!*".includes(item));
-//     character
-//       ? console.log("Spacial Character yoxlanisi-dogru")
-//       : console.log("Spacial Character daxil etmelisiniz");
-//   };
-// };
+const btn = document.getElementById("todo-btn");
+const input = document.getElementById("todo-input");
+const list = document.getElementById("todo-list");
 
-// const password = new Validate("@tural123");
-// password.validateNumberPassword();
-// password.validateLength();
-// password.validateCharacter();
+function handleTodo() {
+  const text = input.value.trim();
+  if (text !== "") {
+    const li = document.createElement("li");
+    li.textContent = text;
+    li.className = "list-group-item item-wrapper";
 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Remove";
+    deleteBtn.className = "btn btn-outline-danger";
+    deleteBtn.onclick = function () {
+      const checkRemove = confirm("Do you want remove ?");
+      if (checkRemove) {
+        li.remove();
+      }
+    };
+    li.appendChild(deleteBtn);
 
+    li.onclick = function () {
+      li.classList.toggle("text-decoration-line-through");
+      deleteBtn.classList.toggle("d-none");
+    };
 
-
-// speacial
-const validatePassword = {
-  validate: function (password) {
-    if (password.length < 7) {
-      throw new Error("yanlisdir, en azi 7 herfden ibaret  olmalidir")
-    } 
-    if (!(password.match("[A-Z]"))) {
-      throw new Error("yanlisdir, en azi 1 eded boyuk herf olmalidir");
-    }
-    if (!(password.match('[a-z]'))) {
-      throw new Error("yanlisdir, en azi 1 eded kici herf olmalidir");
-    }
-    if (!(password.match('[@?&%$!*]'))) {
-      throw new Error("yanlisdir, en azi 1 eded xususi simvol olmalidir");
-    }
-    if (!(password.match('[0-9]'))) {
-      throw new Error("yanlisdir, en azi 1 eded reqem olmalidir");
-    }
-
-    return 'Yazdigin parol ugurludur !'
+    list.appendChild(li);
+    input.value = "";
   }
 }
 
-validatePassword.validate("Amil1234234@"); // yanlisdir, en azi 7 herfden ibaret  olmalidir
+btn.addEventListener("click", handleTodo);
 
-validatePassword.validate("Amil123455@"); // yanlisdir, en azi 1 eded boyuk herf olmalidir
+input.addEventListener("keyup", function (event) {
+    if (event.key === 'Enter') {
+        handleTodo()
+    }
 
-
-validatePassword.validate("Amil123455@"); // yanlisdir, en azi 1 eded kici herf olmalidir
-
-validatePassword.validate("Amil123455@"); // yanlisdir, en azi 1 eded xususi simvol olmalidir
-
-console.log(validatePassword.validate("Amil@@@@@@@@1212"))
+    // event.target
+})
