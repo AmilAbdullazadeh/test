@@ -1,41 +1,25 @@
-const btn = document.getElementById("todo-btn");
-const input = document.getElementById("todo-input");
-const list = document.getElementById("todo-list");
+const baseUrl = "https://jsonplaceholder.typicode.com";
 
-function handleTodo() {
-  const text = input.value.trim();
-  if (text !== "") {
-    const li = document.createElement("li");
-    li.textContent = text;
-    li.className = "list-group-item item-wrapper";
+const contentHTML = document.getElementById("content");
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Remove";
-    deleteBtn.className = "btn btn-outline-danger";
-    deleteBtn.onclick = function () {
-      const checkRemove = confirm("Do you want remove ?");
-      if (checkRemove) {
-        li.remove();
-      }
-    };
-    li.appendChild(deleteBtn);
+const fetchData = async () => {
+  try {
+    const response = await fetch(baseUrl + "/photos");
+    const data = await response.json();
 
-    li.onclick = function () {
-      li.classList.toggle("text-decoration-line-through");
-      deleteBtn.classList.toggle("d-none");
-    };
+    data.slice(0, 10).forEach(
+      (element) =>
+        (contentHTML.innerHTML += `
+        <div class="card">
+          <h2>${element.title}</h2>
+          <img width='200' height="100" src="${element.thumbnailUrl}" />
+        </div>
+    `)
+    );
 
-    list.appendChild(li);
-    input.value = "";
+  } catch (error) {
+    console.log(error);
   }
 }
 
-btn.addEventListener("click", handleTodo);
-
-input.addEventListener("keyup", function (event) {
-    if (event.key === 'Enter') {
-        handleTodo()
-    }
-
-    // event.target
-})
+fetchData()
