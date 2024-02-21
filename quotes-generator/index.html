@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/bootstrap/style.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>JS DOM</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style/bootstrap/style.min.css">
-        <link rel="stylesheet" href="./style/style.css">
-        <title>JS DOM</title>
-    </head>
+  <body style="height: 150vh">
 
-    <body style="height: 150vh" >
+    <div id="todo-app" class="d-flex flex-column p-4 gap-4">
+      <input
+        id="todo-input"
+        type="text"
+        class="form-control"
+        placeholder="Todo list"
+      />
 
-        
-        <div id="content"></div>
-        <div id="loading" style="display: none;" >Loading...</div>
+      <button id="todo-btn" class="btn btn-outline-warning">+ Add</button>
 
-        <script src="./js/main.js"></script>
-    </body>
+      <ul id="todo-list" class="list-group"> </ul>
+    </div>
 
-</html>   
+    <script src="./js/main.js"></script>
+  </body>
+</html>

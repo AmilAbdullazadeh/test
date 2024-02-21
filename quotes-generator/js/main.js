@@ -1,25 +1,53 @@
-const baseUrl = "https://jsonplaceholder.typicode.com";
+const btn = document.getElementById("todo-btn");
+const input = document.getElementById("todo-input");
+const list = document.getElementById("todo-list");
 
-const contentHTML = document.getElementById("content");
+const baseUrl = "http://localhost:3001";
 
 const fetchData = async () => {
   try {
-    const response = await fetch(baseUrl + "/photos");
-    const data = await response.json();
+    const response = await fetch(baseUrl + "/list");
+    const data = await response.json()
 
-    data.slice(0, 10).forEach(
-      (element) =>
-        (contentHTML.innerHTML += `
-        <div class="card">
-          <h2>${element.title}</h2>
-          <img width='200' height="100" src="${element.thumbnailUrl}" />
-        </div>
-    `)
-    );
+    htmlSet(data);
 
   } catch (error) {
     console.log(error);
   }
+};
+
+fetchData();
+
+async function handleTodo() {
+  const text = input.value.trim();
+  if (text !== "") {
+    const response = await fetch(baseUrl + "/list", {
+      method: "POST",
+      body: JSON.stringify({
+        text
+      }),
+    });
+    const data = await response.json()
+    htmlSet(data)
+    input.value = "";
+  }
 }
 
-fetchData()
+function htmlSet(data) {
+  return data.forEach(
+    (element) =>
+      (list.innerHTML += `
+          <li class="card">
+            <h2>${element.text}</h2>
+          </li>
+      `)
+  );
+}
+
+btn.addEventListener("click", handleTodo);
+
+input.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    handleTodo();
+  }
+});
