@@ -1,53 +1,29 @@
-const btn = document.getElementById("todo-btn");
-const input = document.getElementById("todo-input");
-const list = document.getElementById("todo-list");
+const toggle = document.querySelector('#toggle');
+const refresh = document.querySelector('#refresh');
+const clear = document.querySelector('#clear');
 
-const baseUrl = "http://localhost:3001";
+const body = document.querySelector("body");
 
-const fetchData = async () => {
-  try {
-    const response = await fetch(baseUrl + "/list");
-    const data = await response.json()
+const theme = localStorage.getItem("theme");
 
-    htmlSet(data);
+if (theme === "dark") body.classList.add("dark")
 
-  } catch (error) {
-    console.log(error);
+toggle.addEventListener('click', () => {
+
+  body.classList.toggle("dark")
+
+  if (theme === "dark") {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
   }
-};
 
-fetchData();
+})
 
-async function handleTodo() {
-  const text = input.value.trim();
-  if (text !== "") {
-    const response = await fetch(baseUrl + "/list", {
-      method: "POST",
-      body: JSON.stringify({
-        text
-      }),
-    });
-    const data = await response.json()
-    htmlSet(data)
-    input.value = "";
-  }
-}
-
-function htmlSet(data) {
-  return data.forEach(
-    (element) =>
-      (list.innerHTML += `
-          <li class="card">
-            <h2>${element.text}</h2>
-          </li>
-      `)
-  );
-}
-
-btn.addEventListener("click", handleTodo);
-
-input.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    handleTodo();
-  }
+clear.addEventListener("click", () => {
+    localStorage.removeItem("theme")
 });
+
+refresh.addEventListener("click", () => {
+  location.reload()
+})
