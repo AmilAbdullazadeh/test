@@ -41,36 +41,138 @@
       "text": "c 5"
     }
   ],
-  "convertor": [
+  "jokes": [
     {
-      id: "1",
-      "name": "UAH",
-      "currency": "UAH",
-      "rate": "1"
+      "id": "1",
+      "text": "a joke about Chuck Norris"
     },
     {
-      id: "2",
-      "name": "USD",
-      "currency": "USD",
-      "rate": "1"
+      "id": "2",
+      "text": "another joke about Chuck Norris"
     },
     {
-      id: "3",
-      "name": "EUR",
-      "currency": "EUR",
-      "rate": "1.2"
+      "id": "3",
+      "text": "a joke about Chuck Norris"
     },
     {
-      id: "4",
-      "name": "GBP",
-      "currency": "GBP",
-      "rate": "1.5"
+      "id": "4",
+      "text": "another joke about Chuck Norris"
     },
     {
-      id: "5",
-      "name": "RUB",
-      "currency": "RUB",
-      "rate": "0.5"
+      "id": "5",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "6",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "7",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "8",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "9",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "10",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "11",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "12",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "13",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "14",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "15",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "16",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "17",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "18",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "19",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "20",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "21",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "22",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "23",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "24",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "25",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "26",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "27",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "28",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "29",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "30",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": "31",
+      "text": "a joke about Chuck Norris"
+    },
+    {
+      "id": "32",
+      "text": "another joke about Chuck Norris"
+    },
+    {
+      "id": 1,
+      "text": "This is a joke"
     }
   ]
 }
