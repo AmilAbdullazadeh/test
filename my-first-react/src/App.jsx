@@ -1,18 +1,32 @@
 import './App.css'
 import s from './assets/style.module.css'
+import {Header} from "./components/Header/Header.jsx";
+import {Button} from "./components/Button/Button.jsx";
+import {useState} from "react";
 
 export const App = () => {
-  let isOnline = false
+  // 1 Components ✓
+  // 2 Props ✓
+  // 3 State ✓
 
-  function formatDate(date) {
-      return date + ' 🥶'
-  }
+ //? let age = 20
+ const [age, setAge] = useState(0) // immutable
+ //? let name = 'John Doe'
+ const [name, setName] = useState('John Doe')
 
-  let word = <h2>Hello world 👻</h2>
+
+    function changeName() {
+        setName('Nushabe')
+    }
 
   return (
       <div className={`${s.coloRed} ${s.textCenter}`} >
-          { word }
+          <Header />
+          <h2>Hello world 👻 <Button text='Send'  /> </h2>
+           <h3 >Name: {name}</h3>
+          <button onClick={changeName} >Increment</button>
       </div>
   )
 }
+
+// Statefull Functional Component
