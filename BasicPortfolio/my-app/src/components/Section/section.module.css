@@ -1,0 +1,10 @@
+h1 {
+    font-weight: 500;
+    font-size: 45px;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 27px;
+    padding-right: 50px;
+}
