@@ -1,8 +1,7 @@
-import "../../global.css";
-import s from './diffpicker.module.css';
+import { useState } from "react";
 import DisplayBox from "../../components/DisplayBox/DisplayBox.jsx";
 import List from "../../components/List/List.jsx";
-import {useState} from "react";
+import "../../global.css";
 
 export const DiffPicker = () => {
     const [diffLevel, setDiffLevel] = useState("Hard");
