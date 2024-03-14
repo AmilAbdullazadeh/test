@@ -1,7 +1,7 @@
 import { Card, CardBody, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import { Product } from '../../models/product';
 
-export default function ProductCard(props: Product & { key: number }) {
+export default function ProductCard(props: Product & { key?: number | string }) {
   const { image, name, description, price } = props;
   return (
     <Card maxW='sm'>

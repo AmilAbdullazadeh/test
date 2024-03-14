@@ -4,42 +4,42 @@
           "id": 1,
           "name": "Levis Jeans",
           "description": "Levis Jeans made in USA. 100% cotton, slim fit, blue color, available in all sizes.",
-          "image": "https://picsum.photos/seed/picsum/400/300",
+          "image": "https://picsum.photos/seed/technology/1920/500",
           "price": 3500
         },
         {
           "id": 2,
           "name": "Adidas Shoes",
           "description": "Adidas Shoes made in Germany. 100% leather, black color, available in all sizes.",
-          "image": "https://picsum.photos/seed/picsum/400/300",
+          "image": "https://picsum.photos/seed/information/400/300",
           "price": 5000
         },
         {
           "id": 3,
           "name": "Nike T-Shirt",
           "description": "Nike T-Shirt made in USA. 100% cotton, white color, available in all sizes.",
-          "image": "https://picsum.photos/seed/picsum/400/300",
+          "image": "https://picsum.photos/seed/nike/400/300",
           "price": 1500
         },
         {
           "id": 4,
           "name": "Puma Cap",
           "description": "Puma Cap made in Germany. 100% polyester, black color, available in all sizes.",
-          "image": "https://picsum.photos/seed/picsum/400/300",
+          "image": "https://picsum.photos/seed/adidas/400/300",
           "price": 1000
         },
         {
             "id": 5,
             "name": "Rayban Sunglasses",
             "description": "Rayban Sunglasses made in Italy. 100% UV protection, black color, available in all sizes.",
-            "image": "https://picsum.photos/seed/picsum/400/300",
+            "image": "https://picsum.photos/seed/puma/400/300",
             "price": 3000
         },
         {
             "id": 6,
             "name": "Rolex Watch",
             "description": "Rolex Watch made in Switzerland. 100% stainless steel, black color, available in all sizes.",
-            "image": "https://picsum.photos/seed/picsum/400/300",
+            "image": "https://picsum.photos/seed/rolex/400/300",
             "price": 10000
         }
     ]
